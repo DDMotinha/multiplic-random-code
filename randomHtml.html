@@ -1,0 +1,58 @@
+</head>
+<body>
+    <p>Sequencia aleatoria de números</p>
+    <br>
+    <button onclick="seqNumLetra()">Clique Aqui!</button>
+    &nbsp;&nbsp;
+    <p>Teste: </p> <p id="result">Resultado</p>
+    <script>
+            var letra_num = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+            // minimo: 0
+            // maximo: 36
+
+            var ret = letra_num[genNumAndLetter(letra_num.length)];
+
+            function returnUndefined (parameter){
+                if (parameter != undefined){
+                    return parameter;
+                } else {
+                    return ret
+                }
+            }
+
+            function genNumAndLetter(cont) {
+                let randomNum = Math.round(Math.random() * cont);
+                if( randomNum < 37 ){
+                    return randomNum
+                }
+                
+            }
+
+            function seqNumLetra() {
+                let a = letra_num[genNumAndLetter(letra_num.length)];
+                let b = letra_num[genNumAndLetter(letra_num.length)];
+                let c = letra_num[genNumAndLetter(letra_num.length)];
+                let d = letra_num[genNumAndLetter(letra_num.length)];
+                let e = letra_num[genNumAndLetter(letra_num.length)];
+
+                let f = returnUndefined(a);
+                let g = returnUndefined(b);
+                let h = returnUndefined(c);
+                let i = returnUndefined(d);
+                let j = returnUndefined(e);
+
+                let seq = ""+f+g+h+i+j+"";
+                
+                
+                document.getElementById('result').innerHTML = seq;
+
+                console.log("1°: ",f);
+                console.log("2°: ",g);
+                console.log("3°: ",h);
+                console.log("4°: ",i);
+                console.log("5°: ",j);
+                console.log("seq: ", seq);
+
+            }
+    </script>
+</body>
