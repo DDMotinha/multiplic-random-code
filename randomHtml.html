@@ -2,9 +2,9 @@
 <body>
     <p>Senha PPPOE Aleatória</p>
     <br>
-    <button onclick="seqNumLetra()">Clique Aqui!</button>
     &nbsp;&nbsp;
     <p>Senha: </p> <p id="result">Resultado</p>
+    <button onclick="seqNumLetra()">Clique Aqui!</button>
     <script>
             var letra_num = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','w','y','z'];
             var ret = letra_num[genNumAndLetter(letra_num.length)];
@@ -53,6 +53,7 @@
                 
                 document.getElementById('result').innerHTML = seq;
 
+                
             }
     </script>
 </body>
