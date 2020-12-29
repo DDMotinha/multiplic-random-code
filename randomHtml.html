@@ -1,15 +1,12 @@
 </head>
 <body>
-    <p>Sequencia aleatoria de números</p>
+    <p>Senha PPPOE Aleatória</p>
     <br>
     <button onclick="seqNumLetra()">Clique Aqui!</button>
     &nbsp;&nbsp;
-    <p>Teste: </p> <p id="result">Resultado</p>
+    <p>Senha: </p> <p id="result">Resultado</p>
     <script>
-            var letra_num = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-            // minimo: 0
-            // maximo: 36
-
+            var letra_num = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','w','y','z'];
             var ret = letra_num[genNumAndLetter(letra_num.length)];
 
             function returnUndefined (parameter){
@@ -22,36 +19,39 @@
 
             function genNumAndLetter(cont) {
                 let randomNum = Math.round(Math.random() * cont);
-                if( randomNum < 37 ){
+                if( randomNum < 63 ){
                     return randomNum
                 }
                 
             }
 
             function seqNumLetra() {
+
                 let a = letra_num[genNumAndLetter(letra_num.length)];
                 let b = letra_num[genNumAndLetter(letra_num.length)];
                 let c = letra_num[genNumAndLetter(letra_num.length)];
                 let d = letra_num[genNumAndLetter(letra_num.length)];
                 let e = letra_num[genNumAndLetter(letra_num.length)];
+                let f = letra_num[genNumAndLetter(letra_num.length)];
+                let g = letra_num[genNumAndLetter(letra_num.length)];
+                let h = letra_num[genNumAndLetter(letra_num.length)];
+                let i = letra_num[genNumAndLetter(letra_num.length)];
+                let j = letra_num[genNumAndLetter(letra_num.length)];
 
-                let f = returnUndefined(a);
-                let g = returnUndefined(b);
-                let h = returnUndefined(c);
-                let i = returnUndefined(d);
-                let j = returnUndefined(e);
+                let k = returnUndefined(a);
+                let l = returnUndefined(b);
+                let m = returnUndefined(c);
+                let n = returnUndefined(d);
+                let o = returnUndefined(e);
+                let p = returnUndefined(f);
+                let q = returnUndefined(g);
+                let r = returnUndefined(h);
+                let s = returnUndefined(i);
+                let t = returnUndefined(j);
 
-                let seq = ""+f+g+h+i+j+"";
-                
+                let seq = ""+k+l+m+n+o+p+q+r+s+t+"";                
                 
                 document.getElementById('result').innerHTML = seq;
-
-                console.log("1°: ",f);
-                console.log("2°: ",g);
-                console.log("3°: ",h);
-                console.log("4°: ",i);
-                console.log("5°: ",j);
-                console.log("seq: ", seq);
 
             }
     </script>
